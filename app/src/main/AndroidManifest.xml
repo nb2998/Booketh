@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WriterProfileActivity"></activity>
+        <activity android:name=".WriterProfileActivity" />
+        <activity android:name=".AddBookActivity" />
+        <activity android:name=".CreateBookActivity" />
+        <activity android:name=".BookDetailsActivity" />
+        <activity android:name=".FundProjectActivity"></activity>
     </application>
 
 </manifest>
