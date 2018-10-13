@@ -41,26 +41,26 @@ public class AvailableToFundActivity extends AppCompatActivity {
         recViewRecent.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         recViewRecent.setAdapter(recentAdapter);
 
-        trendingBooks.add(new Book("Abc", "Summary", "Ch 1", 2));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
+        trendingBooks.add(new Book("Abc", "Summary", "Ch 1", 2, true));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, true));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
 
-        promotedBooks.add(new Book("Hij", "Summary", "Ch 1", 3));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
+        promotedBooks.add(new Book("Hij", "Summary", "Ch 1", 3, true));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
 
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
-        recentbooks.add(new Book("Recent2", "Summary", "Ch 1", 1));
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, true));
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, false));
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, false));
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, false));
+        recentbooks.add(new Book("Recent2", "Summary", "Ch 1", 1, true));
 
         trendingAdapter.notifyDataSetChanged();
         promotedAdapter.notifyDataSetChanged();

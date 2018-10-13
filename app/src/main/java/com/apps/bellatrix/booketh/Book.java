@@ -5,19 +5,20 @@ import java.io.Serializable;
 public class Book implements Serializable {
     String name, author, summary, sampleContent;
     boolean isPublished;
-    int fundingStatus; // 0 - never, 1- Progress, 2-over
+    int fundingStatus, fundingDaysLeft; // 0 - never, 1- Progress, 2-over
 
     public Book(String name) {
         this.name = name;
     }
 
-    public Book(String name, String summary, String sampleContent, int fundingStatus) {
+    public Book(String name, String summary, String sampleContent, int fundingStatus, boolean isPublished) {
         this.name = name;
         this.author = author;
         this.summary = summary;
         this.sampleContent = sampleContent;
         this.isPublished = isPublished;
         this.fundingStatus = fundingStatus;
+        this.fundingDaysLeft = 43;
     }
 
     public String getName() {
@@ -66,5 +67,9 @@ public class Book implements Serializable {
 
     public void setFundingStatus(int fundingStatus) {
         this.fundingStatus = fundingStatus;
+    }
+
+    public int getFundingDaysLeft() {
+        return this.fundingDaysLeft;
     }
 }

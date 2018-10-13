@@ -23,26 +23,31 @@ public class TrendingBooksActivity extends AppCompatActivity {
 
         recViewTrending = findViewById(R.id.recViewTrending);
 
-        books.add(new Book("Abc", "Summary", "Ch 1", 2));
-        books.add(new Book("Def", "Summary", "Ch 1", 1));
-        books.add(new Book("Def", "Summary", "Ch 1", 1));
-        books.add(new Book("Def", "Summary", "Ch 1", 1));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Def", "Summary", "Ch 1", 1));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Hij", "Summary", "Ch 1", 3));
-        books.add(new Book("Klm", "Summary", "Ch 1", 1));
-        books.add(new Book("Klm", "Summary", "Ch 1", 1));
+        books.add(new Book("Abc", "Summary", "Ch 1", 2, true));
+        books.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        books.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        books.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, true));
+        books.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, true));
+        books.add(new Book("Hij", "Summary", "Ch 1", 2, true));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, false));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, false));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, false));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, true));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, false));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, true));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3, false));
+        books.add(new Book("Klm", "Summary", "Ch 1", 1, true));
+        books.add(new Book("Klm", "Summary", "Ch 1", 1, true));
 
         BookPageAdapter adapter = new BookPageAdapter(books, this);
-        recViewTrending.setLayoutManager(new StaggeredGridLayoutManager(5, StaggeredGridLayoutManager.HORIZONTAL));
+//        recViewTrending.setLayoutManager(new StaggeredGridLayoutManager(5, StaggeredGridLayoutManager.HORIZONTAL));
+
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL);
+        layoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
+        recViewTrending.setLayoutManager(layoutManager);
+        recViewTrending.setHasFixedSize(true);
         recViewTrending.setAdapter(adapter);
     }
 }

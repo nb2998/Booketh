@@ -31,7 +31,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFund.setOnClickListener(this);
 
         ArrayList<Book> bookList = new ArrayList<>();
-        bookList.add(new Book("Void and voices", "This is a book about sufferings of an abandaned dog.", "This is chapter 1..", 1));
+        bookList.add(new Book("Void and voices", "This is a book about sufferings of an abandaned dog.", "This is chapter 1..", 1, true));
+        bookList.add(new Book("Road to nowhere", "This is a book something cool.", "This is chapter 1..", 2, false));
+        bookList.add(new Book("La La Land", "I am an awesome book.", "This is chapter 1..", 1, false));
+        bookList.add(new Book("Voix", "This is a summary.", "This is chapter 1..", 1, true));
+
         userLoggedIn = new User("Nishtha", 3.5, 1, bookList, 1);
 
     }
