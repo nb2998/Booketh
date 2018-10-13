@@ -17,12 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".WriterProfileActivity" />
-        <activity android:name=".AvailableToFundActivity"></activity>
+        <activity android:name=".AvailableToFundActivity" />
         <activity android:name=".WriterProfileActivity" />
         <activity android:name=".AddBookActivity" />
         <activity android:name=".CreateBookActivity" />
         <activity android:name=".BookDetailsActivity" />
-        <activity android:name=".FundProjectActivity"></activity>
+        <activity android:name=".FundProjectActivity" />
+        <activity android:name=".TrendingBooksActivity"></activity>
     </application>
 
 </manifest>

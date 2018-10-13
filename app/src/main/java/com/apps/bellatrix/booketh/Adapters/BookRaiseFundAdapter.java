@@ -6,36 +6,21 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 
 import com.apps.bellatrix.booketh.Book;
 import com.apps.bellatrix.booketh.R;
 
 import java.util.ArrayList;
 
-public class BookRaiseFundAdapter extends RecyclerView.Adapter<BookRaiseFundAdapter.BookHolder> {
+public class BookRaiseFundAdapter extends ArrayAdapter<Book> {
 
     ArrayList<Book> books;
     Context context;
 
-    public BookRaiseFundAdapter(ArrayList<Book> books, Context context) {
-        this.books = books;
-        this.context = context;
-    }
-
-    @NonNull
-    @Override
-    public BookHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new BookHolder(LayoutInflater.from(context).inflate(R.layout.single_row_book_fund, viewGroup, false));
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull BookHolder bookHolder, int i) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return books.size();
+    public BookRaiseFundAdapter(@NonNull Context context, int resource) {
+        super(context, resource);
     }
 
     class BookHolder extends RecyclerView.ViewHolder{
