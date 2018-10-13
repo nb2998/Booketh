@@ -34,7 +34,7 @@
         android:id="@+id/tvSynopsisTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Synopsis"
         android:textStyle="bold" />
 
     <TextView
@@ -47,7 +47,7 @@
         android:id="@+id/tvGenreHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Genre"
         android:textStyle="bold" />
 
     <TextView

@@ -23,7 +23,14 @@
         <activity android:name=".CreateBookActivity" />
         <activity android:name=".BookDetailsActivity" />
         <activity android:name=".FundProjectActivity" />
-        <activity android:name=".TrendingBooksActivity"></activity>
+        <activity android:name=".TrendingBooksActivity" />
+        <activity android:name=".FundFormActivity" />
+        <activity android:name=".Advertise" />
+        <activity android:name=".AdvertiseActivity"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
