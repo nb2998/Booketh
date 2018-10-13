@@ -13,7 +13,7 @@ public class AvailableToFundActivity extends AppCompatActivity {
 
     RecyclerView recViewTrending, recViewPromoted, recViewRecent;
 
-    ArrayList<Book> trendingBooks, promotedBooks, recentbooks;
+    ArrayList<Book> trendingBooks= new ArrayList<>(), promotedBooks = new ArrayList<>(), recentbooks = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

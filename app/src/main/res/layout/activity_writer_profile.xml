@@ -8,6 +8,7 @@
     tools:context=".WriterProfileActivity">
 
     <ImageView
+        android:id="@+id/ivUser"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -22,7 +23,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/tvNameWriter"
+            android:id="@+id/tvNameUser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
@@ -31,7 +32,7 @@
             tools:text="Name" />
 
         <TextView
-            android:id="@+id/tvStarsWriter"
+            android:id="@+id/tvStarsUser"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -53,6 +54,7 @@
             android:textColor="@android:color/black"/>
 
         <Button
+            android:id="@+id/btnAddBook"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -1,6 +1,8 @@
 package com.apps.bellatrix.booketh;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     String name, author, summary, sampleContent;
     boolean isPublished;
     int fundingStatus; // 0 - never, 1- Progress, 2-over

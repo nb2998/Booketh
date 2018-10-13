@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Booketh</string>
+    <string name="userLogin">userLogin</string>
 </resources>
