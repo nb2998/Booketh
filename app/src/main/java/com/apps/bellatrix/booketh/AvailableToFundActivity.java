@@ -4,10 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 
+import com.apps.bellatrix.booketh.Adapters.BookPageAdapter;
 import com.apps.bellatrix.booketh.Adapters.BookRaiseFundAdapter;
 
 import java.util.ArrayList;
+
+import static android.support.v7.widget.StaggeredGridLayoutManager.HORIZONTAL;
 
 public class AvailableToFundActivity extends AppCompatActivity {
 
@@ -36,6 +40,32 @@ public class AvailableToFundActivity extends AppCompatActivity {
 
         recViewRecent.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         recViewRecent.setAdapter(recentAdapter);
+
+        trendingBooks.add(new Book("Abc", "Summary", "Ch 1", 2));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
+        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1));
+
+        promotedBooks.add(new Book("Hij", "Summary", "Ch 1", 3));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
+        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1));
+
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
+        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2));
+        recentbooks.add(new Book("Recent2", "Summary", "Ch 1", 1));
+
+        trendingAdapter.notifyDataSetChanged();
+        promotedAdapter.notifyDataSetChanged();
+        recentAdapter.notifyDataSetChanged();
+
 
     }
 }

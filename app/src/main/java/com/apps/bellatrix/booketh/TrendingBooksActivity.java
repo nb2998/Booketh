@@ -2,15 +2,17 @@ package com.apps.bellatrix.booketh;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.widget.GridView;
 
-import com.apps.bellatrix.booketh.Adapters.BookRaiseFundAdapter;
+import com.apps.bellatrix.booketh.Adapters.BookPageAdapter;
 
 import java.util.ArrayList;
 
 public class TrendingBooksActivity extends AppCompatActivity {
 
-    GridView gvTrending;
+    RecyclerView recViewTrending;
     ArrayList <Book> books = new ArrayList<>();
 
 
@@ -19,14 +21,28 @@ public class TrendingBooksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trending_books);
 
-        gvTrending = findViewById(R.id.gvTrending);
+        recViewTrending = findViewById(R.id.recViewTrending);
 
         books.add(new Book("Abc", "Summary", "Ch 1", 2));
-        books.add(new Book("Def", "Summary", "Ch 1", 2));
-        books.add(new Book("Hij", "Summary", "Ch 1", 2));
-        books.add(new Book("Klm", "Summary", "Ch 1", 2));
+        books.add(new Book("Def", "Summary", "Ch 1", 1));
+        books.add(new Book("Def", "Summary", "Ch 1", 1));
+        books.add(new Book("Def", "Summary", "Ch 1", 1));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Def", "Summary", "Ch 1", 1));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Hij", "Summary", "Ch 1", 3));
+        books.add(new Book("Klm", "Summary", "Ch 1", 1));
+        books.add(new Book("Klm", "Summary", "Ch 1", 1));
 
-        BookRaiseFundAdapter adapter = new BookRaiseFundAdapter(this, R.layout.single_row_book_fund);
-        gvTrending.setAdapter(adapter);
+        BookPageAdapter adapter = new BookPageAdapter(books, this);
+        recViewTrending.setLayoutManager(new StaggeredGridLayoutManager(5, StaggeredGridLayoutManager.HORIZONTAL));
+        recViewTrending.setAdapter(adapter);
     }
 }
