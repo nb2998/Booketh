@@ -5,6 +5,10 @@ public class Book {
     boolean isPublished;
     int fundingStatus; // 0 - never, 1- Progress, 2-over
 
+    public Book(String name) {
+        this.name = name;
+    }
+
     public Book(String name, String summary, String sampleContent, int fundingStatus) {
         this.name = name;
         this.author = author;

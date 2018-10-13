@@ -1,4 +1,4 @@
-package com.apps.bellatrix.booketh;
+package com.apps.bellatrix.booketh.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -7,14 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.apps.bellatrix.booketh.Book;
+import com.apps.bellatrix.booketh.R;
+
 import java.util.ArrayList;
 
-public class BooksProfileAdapter extends RecyclerView.Adapter<BooksProfileAdapter.BookHolder> {
+public class BookRaiseFundAdapter extends RecyclerView.Adapter<BookRaiseFundAdapter.BookHolder> {
 
     ArrayList<Book> books;
     Context context;
 
-    public BooksProfileAdapter(ArrayList<Book> books, Context context) {
+    public BookRaiseFundAdapter(ArrayList<Book> books, Context context) {
         this.books = books;
         this.context = context;
     }
@@ -22,7 +25,7 @@ public class BooksProfileAdapter extends RecyclerView.Adapter<BooksProfileAdapte
     @NonNull
     @Override
     public BookHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new BookHolder(LayoutInflater.from(context).inflate(R.layout.single_book_profile, viewGroup, false));
+        return new BookHolder(LayoutInflater.from(context).inflate(R.layout.single_row_book_fund, viewGroup, false));
     }
 
     @Override

@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".WriterProfileActivity" />
+        <activity android:name=".AvailableToFundActivity"></activity>
+        <activity android:name=".WriterProfileActivity" />
         <activity android:name=".AddBookActivity" />
         <activity android:name=".CreateBookActivity" />
         <activity android:name=".BookDetailsActivity" />
