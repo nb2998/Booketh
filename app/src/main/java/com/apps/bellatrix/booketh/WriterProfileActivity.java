@@ -19,7 +19,7 @@ public class WriterProfileActivity extends AppCompatActivity {
     RecyclerView recViewBooks;
     ImageView ivUser;
     TextView tvNameUser, tvStarsUser;
-    Button btnAddBook;
+    Button btnAddBook, btnTransactions;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -32,8 +32,9 @@ public class WriterProfileActivity extends AppCompatActivity {
         tvNameUser = findViewById(R.id.tvNameUser);
         tvStarsUser = findViewById(R.id.tvStarsUser);
         btnAddBook = findViewById(R.id.btnAddBook);
+        btnTransactions = findViewById(R.id.btnTransactions);
 
-        User user = (User) getIntent().getSerializableExtra(getString(R.string.userLogin));
+        final User user = (User) getIntent().getSerializableExtra(getString(R.string.userLogin));
         ivUser.setImageDrawable(getDrawable(R.drawable.profile));
         tvNameUser.setText(user.getName());
         tvStarsUser.setText("Rating: "+String.valueOf(user.getRatingAsWriter())+" out of 5");
@@ -46,6 +47,16 @@ public class WriterProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(WriterProfileActivity.this, AddBookActivity.class);
+                intent.putExtra(getString(R.string.userLogin), user);
+                startActivity(intent);
+            }
+        });
+
+        btnTransactions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WriterProfileActivity.this, TransactionHistoryActivity.class);
+                intent.putExtra(getString(R.string.userLogin), user);
                 startActivity(intent);
             }
         });

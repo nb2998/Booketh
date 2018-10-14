@@ -26,11 +26,13 @@
         <activity android:name=".TrendingBooksActivity" />
         <activity android:name=".FundFormActivity" />
         <activity android:name=".Advertise" />
-        <activity android:name=".AdvertiseActivity"></activity>
+        <activity android:name=".AdvertiseActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".TransactionHistoryActivity"></activity>
     </application>
 
 </manifest>

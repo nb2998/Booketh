@@ -10,6 +10,7 @@ public class User implements Serializable {
     int levelAsFundRaiser;
     ArrayList<Book> booksWritten;
     int noOfFundsRaised;
+    double balance;
 
     public User(String name, double ratingAsWriter, int levelAsFundRaiser, ArrayList<Book> booksWritten, int noOfFundsRaised) {
         this.name = name;
@@ -37,5 +38,13 @@ public class User implements Serializable {
 
     public int getNoOfFundsRaised() {
         return noOfFundsRaised;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }

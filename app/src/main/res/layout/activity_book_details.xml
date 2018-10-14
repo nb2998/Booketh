@@ -1,72 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".BookDetailsActivity">
+    android:layout_width="match_parent">
 
-
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".BookDetailsActivity">
 
 
         <ImageView
             android:id="@+id/ivCover"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_report_image" />
-
-
-    <TextView
-        android:id="@+id/tvTitleHeading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Title"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/tvSynopsisTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Synopsis"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvSynopsis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/tvGenreHeading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Genre"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvGenre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/book_sample" />
 
 
         <TextView
-            android:id="@+id/tvStory"
+            android:id="@+id/tvTitleHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Story" />
-    </ScrollView>
+            android:text="Title"
+            android:textStyle="bold"
+            android:layout_margin="3dp"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_margin="3dp"/>
+
+        <TextView
+            android:id="@+id/tvSynopsisTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Synopsis"
+            android:layout_margin="3dp"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tvSynopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvGenreHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Genre"
+            android:layout_margin="3dp"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tvGenre"
+            android:layout_width="match_parent"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvStoryHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Story"
+            android:layout_margin="3dp"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/tvStory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Story" />
+        </ScrollView>
 
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvFundingHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Funding Status"
+            android:layout_margin="3dp"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tvFunding"
+            android:layout_width="match_parent"
+            android:layout_margin="3dp"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/btnFund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FUND THIS BOOK"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+</ScrollView>

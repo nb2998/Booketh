@@ -6,7 +6,8 @@
     app:cardPreventCornerOverlap="true"
     app:cardCornerRadius="3dp"
     app:cardElevation="5dp"
-    android:layout_margin="3dp">
+    android:layout_margin="3dp"
+    android:id="@+id/cardViewBookProfile">
 
     <LinearLayout
         android:layout_width="match_parent"

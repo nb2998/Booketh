@@ -1,5 +1,6 @@
 package com.apps.bellatrix.booketh;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,7 +29,7 @@ public class AvailableToFundActivity extends AppCompatActivity {
         recViewTrending = findViewById(R.id.recViewTrending);
         recViewPromoted = findViewById(R.id.recViewPromoted);
 
-        BookRaiseFundAdapter trendingAdapter = new BookRaiseFundAdapter(trendingBooks, this);
+        BookRaiseFundAdapter trendingAdapter = new BookRaiseFundAdapter(trendingBooks, this, );
         BookRaiseFundAdapter recentAdapter = new BookRaiseFundAdapter(recentbooks, this);
         BookRaiseFundAdapter promotedAdapter = new BookRaiseFundAdapter(promotedBooks, this);
 

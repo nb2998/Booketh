@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.apps.bellatrix.booketh.Book;
 import com.apps.bellatrix.booketh.R;
 import com.apps.bellatrix.booketh.TrendingBooksActivity;
+import com.apps.bellatrix.booketh.User;
 
 import java.util.ArrayList;
 
@@ -22,9 +23,13 @@ public class BookRaiseFundAdapter extends RecyclerView.Adapter<BookRaiseFundAdap
     ArrayList<Book> books;
     Context context;
 
-    public BookRaiseFundAdapter(ArrayList<Book> books, Context context) {
+    User user;
+
+    public BookRaiseFundAdapter(ArrayList<Book> books, Context context, Intent intent) {
         this.books = books;
         this.context = context;
+        user = (User) intent.getSerializableExtra(context.getString(R.string.userLogin));
+
     }
 
     @NonNull
