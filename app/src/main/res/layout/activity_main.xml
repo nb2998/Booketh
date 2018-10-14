@@ -1,49 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="#F2B521"
+    android:background="@drawable/bg_gradient"
     >
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Booketh"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="51dp"
+        android:text="Booketh If you are trying to reach entrepreneurs in your advertising efforts, your budget would be well spent with RocketHub. With over 500K members worldwide, RocketHub is the site to generate targeted leads of entrepreneurs, small business owners and others that have that drive to start and build their business. RocketHub offers several options for advertisers as well beyond just banner advertising. "
         android:textAlignment="center"
-        android:textSize="44sp"
-        app:fontFamily="monospace" />
+        android:textSize="18sp"
+        app:fontFamily="sans-serif" />
+
 
     <Button
         android:id="@+id/btnConnect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connect" />
+        android:layout_below="@id/tvName"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@id/btnDiscover"
+        android:background=""
+        android:text="Connect"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnDiscover"
-        android:layout_width="wrap_content"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
-        android:text="Discover" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvName"
+        android:text="Discover"
+        android:textSize="24sp" />
+
 
     <Button
         android:id="@+id/btnAdvertise"
-        android:layout_width="wrap_content"
+        android:layout_width="186dp"
         android:layout_height="wrap_content"
-        android:text="Advertise" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/btnDiscover"
+        android:text="Advertise"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnFund"
-        android:layout_width="wrap_content"
+        android:layout_width="189dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/btnConnect"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@id/btnAdvertise"
+        android:text="Raise a fund"
+        android:textSize="24sp" />
 
-        android:layout_marginBottom="213dp"
-        android:text="Raise a fund" />
+
+
+
 
     <Button
         android:id="@+id/btnBookBot"
@@ -51,4 +72,4 @@
         android:layout_height="wrap_content"
         android:text="Need help of a virtual assistant?" />
 
-</LinearLayout>
+</RelativeLayout>

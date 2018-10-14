@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gradient"
+    >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,7 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="3dp"
             android:text="Promoted books: "
-            android:textColor="@android:color/black" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recViewPromoted"
@@ -30,10 +33,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
             android:text="Trending books: "
-            android:textColor="@android:color/black" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recViewTrending"
@@ -46,10 +50,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
             android:text="Recently added books: "
-            android:textColor="@android:color/black" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recViewRecents"

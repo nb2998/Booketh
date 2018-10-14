@@ -3,4 +3,12 @@
     <string name="userLogin">userLogin</string>
     <string name="bookIntent">bookIntent</string>
     <string name="fundAmountIntent">fundAmount</string>
+    <string-array name="country_array">
+        <item>Rs. 100   Top 70% in promoted</item>
+        <item>Rs. 200   Top 50% in promoted</item>
+        <item>Rs. 500   Top 20% in promoted</item>
+        <item>Rs. 1000   Top 5% in promoted</item>
+
+    </string-array>
+>>>>>>> Stashed changes
 </resources>
