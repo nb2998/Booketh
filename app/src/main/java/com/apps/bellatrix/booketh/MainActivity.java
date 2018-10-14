@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnConnect, btnDiscover, btnAdvertise, btnFund;
+    Button btnConnect, btnDiscover, btnAdvertise, btnFund, btnBookBot;
     User userLoggedIn;
 
     @Override
@@ -24,11 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDiscover = findViewById(R.id.btnDiscover);
         btnAdvertise = findViewById(R.id.btnAdvertise);
         btnFund = findViewById(R.id.btnFund);
+        btnBookBot = findViewById(R.id.btnBookBot);
 
         btnConnect.setOnClickListener(this);
         btnDiscover.setOnClickListener(this);
         btnAdvertise.setOnClickListener(this);
         btnFund.setOnClickListener(this);
+        btnBookBot.setOnClickListener(this);
 
         ArrayList<Book> bookList = new ArrayList<>();
         bookList.add(new Book("Void and voices", "This is a book about sufferings of an abandaned dog.", "This is chapter 1..", 1, true));
@@ -62,11 +64,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view.getId() == R.id.btnConnect) {
 
         } else if (view.getId() == R.id.btnAdvertise) {
-
+            Intent intent = new Intent(MainActivity.this, AdvertiseActivity.class);
+            startActivity(intent);
         } else if (view.getId() == R.id.btnDiscover) {
 
         } else if (view.getId() == R.id.btnFund) {
             Intent intent = new Intent(MainActivity.this, AvailableToFundActivity.class);
+            startActivity(intent);
+        } else if (view.getId() == R.id.btnBookBot){
+            Intent intent = new Intent(MainActivity.this, BookBotActivity.class);
             startActivity(intent);
         }
     }

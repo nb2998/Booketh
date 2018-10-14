@@ -45,7 +45,10 @@
         android:layout_marginBottom="213dp"
         android:text="Raise a fund" />
 
-
-
+    <Button
+        android:id="@+id/btnBookBot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need help of a virtual assistant?" />
 
 </LinearLayout>
