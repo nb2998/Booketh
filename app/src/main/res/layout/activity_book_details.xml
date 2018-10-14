@@ -70,21 +70,6 @@
                     android:text="TextView"
                     android:textColor="@android:color/black" />
 
-                <TextView
-                    android:id="@+id/tvGenreHeading"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:text="Genre"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvGenre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:text="TextView" />
 
                 <TextView
                     android:id="@+id/tvStoryHeading"

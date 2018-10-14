@@ -35,7 +35,8 @@
 
         <activity android:name=".TransactionHistoryActivity" />
         <activity android:name=".BookBotActivity" />
-        <activity android:name=".ConnectionActivity"></activity>
+        <activity android:name=".ConnectionActivity" />
+        <activity android:name=".RaiseFundingActivity"></activity>
     </application>
 
 </manifest>
