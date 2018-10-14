@@ -40,7 +40,7 @@ public class BookPageAdapter extends RecyclerView.Adapter<BookPageAdapter.BookHo
 
     @Override
     public void onBindViewHolder(@NonNull final BookHolder bookHolder, int i) {
-        bookHolder.ivBook.setImageDrawable(context.getDrawable(R.drawable.book_sample));
+        bookHolder.ivBook.setImageDrawable(context.getDrawable(books.get(i).getImgsrc()));
         bookHolder.tvBookName.setText(books.get(i).getName());
 
         bookHolder.cardViewBookFund.setOnClickListener(new View.OnClickListener() {

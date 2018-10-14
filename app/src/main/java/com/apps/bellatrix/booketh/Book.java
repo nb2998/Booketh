@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Book implements Serializable {
     String name, author, summary, sampleContent;
     boolean isPublished;
-    int fundingStatus, fundingDaysLeft; // 0 - never, 1- Progress, 2-over
+    int fundingStatus, fundingDaysLeft, imgsrc; // 0 - never, 1- Progress, 2-over
 
     public Book(String name) {
         this.name = name;
@@ -19,6 +19,17 @@ public class Book implements Serializable {
         this.isPublished = isPublished;
         this.fundingStatus = fundingStatus;
         this.fundingDaysLeft = 43;
+    }
+
+    public Book(String name, String summary, String sampleContent, int fundingStatus, boolean isPublished, int imgsrc) {
+        this.name = name;
+        this.author = author;
+        this.summary = summary;
+        this.sampleContent = sampleContent;
+        this.isPublished = isPublished;
+        this.fundingStatus = fundingStatus;
+        this.fundingDaysLeft = 43;
+        this.imgsrc = imgsrc;
     }
 
     public String getName() {
@@ -71,5 +82,10 @@ public class Book implements Serializable {
 
     public int getFundingDaysLeft() {
         return this.fundingDaysLeft;
+    }
+
+
+    public int getImgsrc() {
+        return imgsrc;
     }
 }

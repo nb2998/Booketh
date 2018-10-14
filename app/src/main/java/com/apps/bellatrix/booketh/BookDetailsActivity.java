@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BookDetailsActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class BookDetailsActivity extends AppCompatActivity {
     TextView tvTitle, tvSynopsis, tvGenre, tvStory, tvFunding;
     Button btnFund;
     Book book;
+    ImageView ivCover;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +30,15 @@ public class BookDetailsActivity extends AppCompatActivity {
         tvStory = findViewById(R.id.tvStory);
         tvSynopsis = findViewById(R.id.tvSynopsis);
         btnFund = findViewById(R.id.btnFund);
+        ivCover = findViewById(R.id.ivCover);
 
         book = (Book) getIntent().getSerializableExtra(getString(R.string.bookIntent));
         tvTitle.setText(book.getName());
         tvSynopsis.setText(book.getSummary());
         tvStory.setText(book.getSampleContent());
+        ivCover.setImageDrawable(getDrawable(book.getImgsrc()));
 //        tvGenre.setText("Thriller");
+
 
         int fundingStatus = book.fundingStatus;
 

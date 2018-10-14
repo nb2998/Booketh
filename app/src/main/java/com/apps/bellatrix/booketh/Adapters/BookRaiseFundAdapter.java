@@ -40,7 +40,7 @@ public class BookRaiseFundAdapter extends RecyclerView.Adapter<BookRaiseFundAdap
 
     @Override
     public void onBindViewHolder(@NonNull BookHolder bookHolder, final int i) {
-        bookHolder.ivBook.setImageDrawable(context.getDrawable(R.drawable.book_sample));
+//        bookHolder.ivBook.setImageDrawable(context.getDrawable(R.drawable.book_sample));
         bookHolder.tvBookName.setText(books.get(i).getName());
         bookHolder.bookLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +49,7 @@ public class BookRaiseFundAdapter extends RecyclerView.Adapter<BookRaiseFundAdap
                 context.startActivity(intent);
             }
         });
+        bookHolder.ivBook.setImageDrawable(context.getDrawable(books.get(i).getImgsrc()));
     }
 
     @Override

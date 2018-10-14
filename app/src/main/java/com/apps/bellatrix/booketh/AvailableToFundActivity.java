@@ -32,6 +32,9 @@ public class AvailableToFundActivity extends AppCompatActivity {
         BookRaiseFundAdapter trendingAdapter = new BookRaiseFundAdapter(trendingBooks, this, getIntent());
         BookRaiseFundAdapter recentAdapter = new BookRaiseFundAdapter(recentbooks, this, getIntent());
         BookRaiseFundAdapter promotedAdapter = new BookRaiseFundAdapter(promotedBooks, this, getIntent());
+        trendingAdapter.setHasStableIds(true);
+        recentAdapter.setHasStableIds(true);
+        promotedAdapter.setHasStableIds(true);
 
         recViewPromoted.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         recViewPromoted.setAdapter(promotedAdapter);
@@ -42,26 +45,26 @@ public class AvailableToFundActivity extends AppCompatActivity {
         recViewRecent.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         recViewRecent.setAdapter(recentAdapter);
 
-        trendingBooks.add(new Book("Abc", "Summary", "Ch 1", 2, true));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, true));
-        trendingBooks.add(new Book("Def", "Summary", "Ch 1", 1, false));
+        trendingBooks.add(new Book("Wicked Wide Wonderful", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 2, true, R.drawable.b));
+        trendingBooks.add(new Book("Wicked Wide Wonderful", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false,  R.drawable.b));
+        trendingBooks.add(new Book("Wicked Wide Wonderful", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.b));
+        trendingBooks.add(new Book("Wicked Wide Wonderful", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false,  R.drawable.b));
+        trendingBooks.add(new Book("Wicked Wide Wonderful", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.b));
+        trendingBooks.add(new Book("Wicked Wide Wonderful", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, true, R.drawable.b));
+        trendingBooks.add(new Book("Wicked Wide Wonderful", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.b));
 
-        promotedBooks.add(new Book("Hij", "Summary", "Ch 1", 3, true));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
-        promotedBooks.add(new Book("Klm", "Summary", "Ch 1", 1, false));
+        promotedBooks.add(new Book("Dialogue Concerning The Imminent Apocalypse", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 3, true, R.drawable.c));
+        promotedBooks.add(new Book("Dialogue Concerning The Imminent Apocalypse", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.c));
+        promotedBooks.add(new Book("Dialogue Concerning The Imminent Apocalypse", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.c));
+        promotedBooks.add(new Book("Dialogue Concerning The Imminent Apocalypse", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.c));
+        promotedBooks.add(new Book("Dialogue Concerning The Imminent Apocalypse", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.c));
+        promotedBooks.add(new Book("Dialogue Concerning The Imminent Apocalypse", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 1, false, R.drawable.c));
 
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, true));
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, false));
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, false));
-        recentbooks.add(new Book("Recent", "Summary", "Ch 1", 2, false));
-        recentbooks.add(new Book("Recent2", "Summary", "Ch 1", 1, true));
+        recentbooks.add(new Book("The Omens of a Crown", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 2, true, R.drawable.d));
+        recentbooks.add(new Book("The Omens of a Crown", "Book tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.", "Ch 1", 2, false, R.drawable.d));
+        recentbooks.add(new Book("The Omens of a Crown", "Summary", "Ch 1", 2, false, R.drawable.d));
+        recentbooks.add(new Book("The Omens of a Crown", "Summary", "Ch 1", 2, false, R.drawable.d));
+        recentbooks.add(new Book("The Omens of a Crown", "Summary", "Ch 1", 1, true, R.drawable.d));
 
         trendingAdapter.notifyDataSetChanged();
         promotedAdapter.notifyDataSetChanged();

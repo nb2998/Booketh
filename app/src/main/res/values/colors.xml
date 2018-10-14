@@ -6,4 +6,5 @@
     <color name="bg_gradient_start">#000000</color>
     <color name="bg_gradient_end">#434343</color>
     <color name="white">#F9FAF8</color>
+    <color name="backgroundcolor">#748C7C</color>
 </resources>
