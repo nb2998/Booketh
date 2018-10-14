@@ -18,14 +18,13 @@
         </activity>
         <activity android:name=".WriterProfileActivity" />
         <activity android:name=".AvailableToFundActivity" />
-        <activity android:name=".WriterProfileActivity" />
         <activity android:name=".AddBookActivity" />
         <activity android:name=".CreateBookActivity" />
         <activity android:name=".BookDetailsActivity" />
         <activity android:name=".FundProjectActivity" />
         <activity android:name=".TrendingBooksActivity" />
         <activity android:name=".FundFormActivity" />
-        <activity android:name=".Advertise" />
+        <activity android:name=".ConfirmationActivity"/>
         <activity android:name=".AdvertiseActivity" />
 
         <meta-data

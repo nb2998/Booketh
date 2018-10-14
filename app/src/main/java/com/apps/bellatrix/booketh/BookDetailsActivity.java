@@ -20,6 +20,7 @@ public class BookDetailsActivity extends AppCompatActivity {
 
         tvTitle = findViewById(R.id.tvTitle);
 //        tvGenre = findViewById(R.id.tvGenre);
+        tvFunding = findViewById(R.id.tvFunding);
         tvStory = findViewById(R.id.tvStory);
         tvSynopsis = findViewById(R.id.tvSynopsis);
         btnFund = findViewById(R.id.btnFund);
@@ -28,7 +29,7 @@ public class BookDetailsActivity extends AppCompatActivity {
         tvTitle.setText(book.getName());
         tvSynopsis.setText(book.getSummary());
         tvStory.setText(book.getSampleContent());
-        tvGenre.setText("Thriller");
+//        tvGenre.setText("Thriller");
 
         int fundingStatus = book.fundingStatus;
 
@@ -48,7 +49,7 @@ public class BookDetailsActivity extends AppCompatActivity {
             });
 
         } else{
-
+            tvFunding.setText("Funding period over.");
         }
     }
 }

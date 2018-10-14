@@ -39,7 +39,7 @@ public class BookPageAdapter extends RecyclerView.Adapter<BookPageAdapter.BookHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BookHolder bookHolder, int i) {
+    public void onBindViewHolder(@NonNull final BookHolder bookHolder, int i) {
         bookHolder.ivBook.setImageDrawable(context.getDrawable(R.drawable.book_sample));
         bookHolder.tvBookName.setText(books.get(i).getName());
 
@@ -47,6 +47,7 @@ public class BookPageAdapter extends RecyclerView.Adapter<BookPageAdapter.BookHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, BookDetailsActivity.class);
+                intent.putExtra(context.getString(R.string.bookIntent), books.get(bookHolder.getAdapterPosition()));
                 context.startActivity(intent);
             }
         });

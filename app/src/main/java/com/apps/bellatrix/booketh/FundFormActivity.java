@@ -26,8 +26,10 @@ public class FundFormActivity extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-
+                                Intent intent = new Intent(FundFormActivity.this, ConfirmationActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 dialogInterface.dismiss();
+                                startActivity(intent);
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -37,6 +39,7 @@ public class FundFormActivity extends AppCompatActivity {
                             }
                         })
                         .create();
+                alertDialog.show();
             }
         });
     }

@@ -29,9 +29,9 @@ public class AvailableToFundActivity extends AppCompatActivity {
         recViewTrending = findViewById(R.id.recViewTrending);
         recViewPromoted = findViewById(R.id.recViewPromoted);
 
-        BookRaiseFundAdapter trendingAdapter = new BookRaiseFundAdapter(trendingBooks, this, );
-        BookRaiseFundAdapter recentAdapter = new BookRaiseFundAdapter(recentbooks, this);
-        BookRaiseFundAdapter promotedAdapter = new BookRaiseFundAdapter(promotedBooks, this);
+        BookRaiseFundAdapter trendingAdapter = new BookRaiseFundAdapter(trendingBooks, this, getIntent());
+        BookRaiseFundAdapter recentAdapter = new BookRaiseFundAdapter(recentbooks, this, getIntent());
+        BookRaiseFundAdapter promotedAdapter = new BookRaiseFundAdapter(promotedBooks, this, getIntent());
 
         recViewPromoted.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
         recViewPromoted.setAdapter(promotedAdapter);
