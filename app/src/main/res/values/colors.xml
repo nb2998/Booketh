@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#31244e</color>
-    <color name="colorPrimaryDark">#1a172b</color>
+    <color name="colorPrimary">#4F5F5A</color>
+    <color name="colorPrimaryDark">#3E4543</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="bg_gradient_start">#31244e</color>
-    <color name="bg_gradient_end">#6b394c</color>
+    <color name="bg_gradient_start">#000000</color>
+    <color name="bg_gradient_end">#434343</color>
+    <color name="white">#F9FAF8</color>
 </resources>
