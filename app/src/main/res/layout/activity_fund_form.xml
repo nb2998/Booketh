@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FundFormActivity"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
+        android:textSize="18dp"
         android:layout_height="wrap_content"
         android:text="Please enter the funding amount and read the terms and conditions carefully."
         android:textColor="@android:color/black"
@@ -21,6 +23,21 @@
         android:hint="Enter the funding amount"
         android:layout_margin="10dp"/>
 
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/tvterms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Criteria-
+        \nUpto 500 ETH. Priviledge- 10% one time discount for books of the writer.
+        \nUpto 1000 ETH. Priviledge- 20% discount for all books of the writer.
+        \nUpto 5000 ETH. Priviledge- 20% lifetime discount.
+
+        \n\nEach writer gets a maximum of 60 days to raise their target amount. In case the writer fails to reach the target amount, this money is returned back to you!
+"
+        />
+
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,9 +46,11 @@
 
     <Button
         android:id="@+id/btnProceed"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textSize="20dp"
         android:text="Proceed"/>
 
 

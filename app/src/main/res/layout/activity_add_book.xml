@@ -1,110 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".AddBookActivity">
 
     <ImageView
         android:id="@+id/ivAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tvAddCover"
-        android:layout_alignEnd="@+id/tvAddCover"
-        app:layout_constraintEnd_toStartOf="@+id/tvAddCover"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_input_add" />
 
 
     <TextView
         android:id="@+id/tvAddCover"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
         android:text="Add Cover"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivAdd"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+
+         />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_margin="20dp"
         android:text="Book Title"
-        app:layout_constraintEnd_toStartOf="@+id/etTitle2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="120dp" />
+         />
 
     <EditText
         android:id="@+id/etTitle2"
-        android:layout_width="wrap_content"
+        android:layout_width="172dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ivAdd"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="20dp" />
 
     <TextView
         android:id="@+id/tvSynopsis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_margin="20dp"
+
         android:text="Synopsis"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="186dp" />
+         />
+
+
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="352dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSynopsis" />
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp" />
+
+
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp">
 
+        <EditText
+            android:id="@+id/etStory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start writing..." />
 
     </ScrollView>
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnPublish"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="93dp"
-        android:layout_toStartOf="@+id/ivAdd"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:text="Publish"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="30dp"
+        android:textSize="20dp"
+        />
 
-</RelativeLayout>
+
+</LinearLayout>

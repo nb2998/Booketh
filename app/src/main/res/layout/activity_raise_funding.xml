@@ -44,7 +44,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Terms and conditions..."/>
+            android:text="Terms and conditions
+\n1.You get a maximum of 100 days to run your campaign and raise your target amount
+\n2.It's All or Nothing! You only get your funds when you reach your target amount. Else the money is returned to the funders!
+\n3.Don't feel shy when crowdfunding; be ready to reach out to your personal network - friends, family, alumni, colleagues and share with them your work and ask for their support!
+"/>
     </ScrollView>
 
 

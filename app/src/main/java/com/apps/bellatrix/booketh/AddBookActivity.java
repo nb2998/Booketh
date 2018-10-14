@@ -23,11 +23,13 @@ public class AddBookActivity extends AppCompatActivity {
     private static final int RESULT_LOAD_IMAGE = 100;
     ImageView ivAdd;
     TextView tvAddCover;
+    Button btnPublish;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_book);
 
+        btnPublish = findViewById(R.id.btnPublish);
         ivAdd = findViewById(R.id.ivAdd);
         tvAddCover = findViewById(R.id.tvAddCover);
         ivAdd.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +37,13 @@ public class AddBookActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(i, RESULT_LOAD_IMAGE);
+            }
+        });
+        btnPublish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AddBookActivity.this, RaiseFundingActivity.class);
+                startActivity(i);
             }
         });
     }
