@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,16 +21,16 @@ import java.util.List;
 public class AddBookActivity extends AppCompatActivity {
 
     private static final int RESULT_LOAD_IMAGE = 100;
-    ImageButton btnAddCover;
+    ImageView ivAdd;
     TextView tvAddCover;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_book);
 
-        btnAddCover = findViewById(R.id.btnAddCover);
+        ivAdd = findViewById(R.id.ivAdd);
         tvAddCover = findViewById(R.id.tvAddCover);
-        btnAddCover.setOnClickListener(new View.OnClickListener() {
+        ivAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -62,7 +63,7 @@ public class AddBookActivity extends AppCompatActivity {
             cursor.close(); // close cursor
 
             Bitmap photo = BitmapFactory.decodeFile(picturePath);
-            btnAddCover.setImageBitmap(photo);
+            ivAdd.setImageBitmap(photo);
             tvAddCover.setVisibility(View.GONE);
         }
     }
