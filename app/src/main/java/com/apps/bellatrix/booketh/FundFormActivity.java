@@ -7,9 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class FundFormActivity extends AppCompatActivity {
 
+    EditText etAmount;
     Button btnProceed;
 
     @Override
@@ -18,6 +20,8 @@ public class FundFormActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fund_form);
 
         btnProceed = findViewById(R.id.btnProceed);
+        etAmount = findViewById(R.id.etFundingAmt);
+
         btnProceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,6 +32,7 @@ public class FundFormActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 Intent intent = new Intent(FundFormActivity.this, ConfirmationActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                intent.putExtra(getString(R.string.fundAmountIntent), Double.parseDouble(String.valueOf(etAmount.getText())));
                                 dialogInterface.dismiss();
                                 startActivity(intent);
                             }

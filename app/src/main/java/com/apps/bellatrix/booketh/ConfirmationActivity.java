@@ -12,7 +12,7 @@ public class ConfirmationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.confirmation_activity);
-        amount = getIntent().getIntExtra(getString(R.string.fundAmountIntent), 2);
+        amount = getIntent().getDoubleExtra(getString(R.string.fundAmountIntent), 2);
     }
 
     @Override
@@ -21,6 +21,7 @@ public class ConfirmationActivity extends AppCompatActivity {
         Intent goBackToWalletIntent = new Intent(ConfirmationActivity.this, TransactionHistoryActivity.class);
         goBackToWalletIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         goBackToWalletIntent.putExtra(getString(R.string.fundAmountIntent), amount);
+        goBackToWalletIntent.putExtra(getString(R.string.confirmationIntent), getString(R.string.confirmationIntent));
         startActivity(goBackToWalletIntent);
     }
 }

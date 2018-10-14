@@ -1,8 +1,12 @@
 package com.apps.bellatrix.booketh;
 
 import android.content.Intent;
+import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -51,5 +55,30 @@ public class BookDetailsActivity extends AppCompatActivity {
         } else{
             tvFunding.setText("Funding period over.");
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_share_book, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.menuShare) {
+
+            ShareCompat.IntentBuilder.from(this)
+                    .setType("text/plain")
+                    .setChooserTitle("Choose the app")
+                    .setText("Hey, I wrote a book named "+book.getName()+" and looking for funding. Would you be able to help me out?")
+                    .startChooser();
+//            Intent intent = new Intent(Intent.ACTION_SEND);
+//            intent.setType("text/plain");
+//            intent.putExtra(Intent.EXTRA_SUBJECT, "Hey, I wrote a book named "+book.getName()+" and looking for funding. Would you be able to help me out?");
+//
+//            startActivity(Intent.createChooser(intent, "Choose any one"));
+            return true;
+        }
+        return false;
     }
 }

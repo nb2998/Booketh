@@ -3,6 +3,8 @@
     <string name="userLogin">userLogin</string>
     <string name="bookIntent">bookIntent</string>
     <string name="fundAmountIntent">fundAmount</string>
+    <string name="confirmationIntent">confirmIntent</string>
+    <string name="sharedPrefAmt">sharedPrefAmt</string>
     <string-array name="country_array">
         <item>Rs. 100   Top 70% in promoted</item>
         <item>Rs. 200   Top 50% in promoted</item>
