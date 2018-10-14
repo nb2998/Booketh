@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.apps.bellatrix.booketh">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +34,8 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".TransactionHistoryActivity" />
-        <activity android:name=".BookBotActivity"></activity>
+        <activity android:name=".BookBotActivity" />
+        <activity android:name=".ConnectionActivity"></activity>
     </application>
 
 </manifest>

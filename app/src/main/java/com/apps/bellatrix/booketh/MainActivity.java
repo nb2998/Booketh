@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.btnConnect) {
-
+            Intent intent = new Intent(MainActivity.this, ConnectionActivity.class);
+            startActivity(intent);
         } else if (view.getId() == R.id.btnAdvertise) {
             Intent intent = new Intent(MainActivity.this, AdvertiseActivity.class);
             startActivity(intent);
