@@ -21,20 +21,27 @@ public class TransactionHistoryActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-
         Double initialAmt = Double.parseDouble(sharedPreferences.getString(getString(R.string.fundAmountIntent), "120"));
 
         Intent receivedIntent = getIntent();
-        if(receivedIntent != null && receivedIntent.getStringExtra(getString(R.string.confirmationIntent))!=null){
+        if (receivedIntent != null && receivedIntent.getStringExtra(getString(R.string.confirmationIntent)) != null) {
             double amt = receivedIntent.getDoubleExtra(getString(R.string.fundAmountIntent), 2);
             Double remainAmt = initialAmt - amt;
-            tvEthBalance.setText(String.valueOf(remainAmt));
 
+            if (remainAmt <= 0)
+                remainAmt = 120.0;
+
+            tvEthBalance.setText(String.valueOf(remainAmt));
             sharedPreferences.edit().putString(getString(R.string.sharedPrefAmt), Double.toString(remainAmt)).apply();
         } else {
-            tvEthBalance.setText(sharedPreferences.getString(getString(R.string.sharedPrefAmt), "120"));
+            double amt = Double.parseDouble(sharedPreferences.getString(getString(R.string.fundAmountIntent), "120"));
+            if (amt <= 0) {
+                amt = 120.0;
+                sharedPreferences.edit().putString(getString(R.string.sharedPrefAmt), Double.toString(amt)).apply();
+            }
+            tvEthBalance.setText(String.valueOf(amt));
         }
 
-        Log.d("TAG", "onCreate: "+getIntent().getDoubleExtra(getString(R.string.fundAmountIntent), 2));
+        Log.d("TAG", "onCreate: " + getIntent().getDoubleExtra(getString(R.string.fundAmountIntent), 2));
     }
 }

@@ -20,25 +20,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="8dp"
-        android:layout_weight="1">
+        android:layout_weight="1.5"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvNameUser"
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
             android:gravity="center"
+            android:textSize="24sp"
             android:textColor="@android:color/black"
-            tools:text="Name" />
+            tools:text="Name"
+            android:textStyle="bold"
+            android:layout_width="match_parent" />
 
         <TextView
             android:id="@+id/tvStarsUser"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
             android:textColor="@android:color/black"
-            tools:text="Rating: 4.3" />
+            tools:text="Rating: 4.3"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
@@ -58,7 +60,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="List of books"
-            android:textColor="@android:color/black"/>
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="5dp" />
 
         <Button
             android:id="@+id/btnAddBook"
